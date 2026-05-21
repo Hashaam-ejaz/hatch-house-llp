@@ -3,17 +3,19 @@ import Button from "./Button.astro"
 ---
 
 <header class="flex justify-between items-center px-4 py-4">
-  <div class="flex gap-2.5">
+  <div class="flex gap-2.5 justify-center items-center">
     <img src="/favicon.svg"/> 
-    <img src="/hatchText.svg"/>
+    <span class="font-bold text-[28px]">HatchHouseLLP</span>
   </div>
   <div class="flex md:hidden">
     <Button text="Contact Now" variant="primary" href="#contact" class="text-[14px]!" target="_self"/>
   </div>
 
   <div class="hidden md:flex items-center gap-[70px]">
-    <Button text="Amenities" variant="ghost" href="#amenities" target="_self" />
-    <Button text="Pricing" variant="ghost" href="#pricing" target="_self" />
-    <Button text="Contact Now" variant="primary" href="#contact" target="_self" />
+    <Button text="Home" variant="ghost" href="#home" target="_self" class="text-[20px]" />
+    <Button text="Our Division" variant="ghost" href="#division" target="_self" class="text-[20px]"/>
+    <Button text="Services" variant="ghost" href="#services" target="_self" class="text-[20px]" />
+    <Button text="Projects" variant="ghost" href="#projects" target="_self" class="text-[20px]"/>
+    <Button text="Contact Now" variant="primary" href="#contact" target="_self" class="text-[20px]" />
   </div>
 </header>
