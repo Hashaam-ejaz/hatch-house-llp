@@ -1,0 +1,45 @@
+---
+interface Props {
+  iconSrc?: string;
+  heading?: string;
+  headingStyles?: string;
+  subheading?: string;
+  points?: string[];
+  // NEW: Optional style overrides with your current styles as the defaults
+  bgStyles?: string;
+  borderStyles?: string;
+  customBorderStyle?: string; 
+}
+
+// Assigning defaults directly in the destructuring assignment
+const { 
+  iconSrc, 
+  heading, 
+  headingStyles, 
+  subheading, 
+  points = [],
+  bgStyles = "bg-secondary/60 backdrop-blur-[20px]", 
+  borderStyles = "border border-primary",
+  customBorderStyle = "" // Empty string by default
+} = Astro.props;
+---
+
+<div 
+  class={`rounded-2xl p-6 md:p-8 shadow-2xl ${bgStyles} ${borderStyles}`}
+  style={customBorderStyle}
+>
+  {iconSrc && <img src={iconSrc} class="w-[30px] h-[30px] mb-4"/>}
+  <h3 class={headingStyles}>{heading}</h3>
+  {subheading && <h4 class="text-sm font-semibold uppercase tracking-wider text-[#E0E3E5] mb-4">{subheading}</h4>}
+  
+  {points.length > 0 && (
+    <ul class="space-y-4 text-sm font-medium tracking-wide text-gray-200 mt-4">
+      {points.map((point) => (
+        <li class="flex items-center gap-3">
+          <img src='/hero-tick.svg' class="w-4 h-4 text-primary shrink-0" alt="tick" />
+          {point}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>

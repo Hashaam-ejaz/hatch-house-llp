@@ -1,4 +1,13 @@
 ---
+import TextCard from "./TextCard.astro";
+
+const points = [
+  "Operational Excellence",
+  "Technical Percision",
+  "Scalable Solutions",
+  "Transparent Execution"
+]
+
 ---
 
 <section
@@ -38,27 +47,7 @@
   </div>
 
   <div class="hidden lg:block md:col-span-5 lg:justify-self-end w-full max-w-sm">
-    <div class="border border-primary bg-secondary/60 backdrop-blur-[20px] rounded-2xl p-6 md:p-8 shadow-2xl">
-      <h3 class="text-xl font-semibold text-primary mb-6">We Deliver</h3>
-      <ul class="space-y-4 text-sm font-medium tracking-wide text-gray-200">
-        <li class="flex items-center gap-3">
-          <img src="/hero-tick.svg" class="w-4 h-4 text-primary shrink-0" alt="tick" />
-          Operational Excellence
-        </li>
-        <li class="flex items-center gap-3">
-          <img src="/hero-tick.svg" class="w-4 h-4 text-primary shrink-0" alt="tick" />
-          Technical Precision
-        </li>
-        <li class="flex items-center gap-3">
-          <img src="/hero-tick.svg" class="w-4 h-4 text-primary shrink-0" alt="tick" />
-          Scalable Solutions
-        </li>
-        <li class="flex items-center gap-3">
-          <img src="/hero-tick.svg" class="w-4 h-4 text-primary shrink-0" alt="tick" />
-          Transparent Execution
-        </li>
-      </ul>
-    </div>
+    <TextCard heading="We Deliver" headingStyles="text-xl font-semibold text-primary mb-6" points={points}/>
   </div>
 </div>
 
