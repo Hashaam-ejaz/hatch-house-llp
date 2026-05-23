@@ -11,7 +11,6 @@ interface Props {
   customBorderStyle?: string; 
 }
 
-// Assigning defaults directly in the destructuring assignment
 const { 
   iconSrc, 
   heading, 
@@ -20,7 +19,7 @@ const {
   points = [],
   bgStyles = "bg-secondary/60 backdrop-blur-[20px]", 
   borderStyles = "border border-primary",
-  customBorderStyle = "" // Empty string by default
+  customBorderStyle = ""
 } = Astro.props;
 ---
 
@@ -30,7 +29,7 @@ const {
 >
   {iconSrc && <img src={iconSrc} class="w-[30px] h-[30px] mb-4"/>}
   <h3 class={headingStyles}>{heading}</h3>
-  {subheading && <h4 class="text-sm font-semibold uppercase tracking-wider text-[#E0E3E5] mb-4">{subheading}</h4>}
+  {subheading && <h4 class="text-sm text-[#E3E3E3] mb-6 mt-3">{subheading}</h4>}
   
   {points.length > 0 && (
     <ul class="space-y-4 text-sm font-medium tracking-wide text-gray-200 mt-4">

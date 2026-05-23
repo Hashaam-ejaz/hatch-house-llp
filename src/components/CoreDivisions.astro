@@ -1,0 +1,77 @@
+---
+import TextCard from "./TextCard.astro";
+
+const coreDivisions = [
+  {
+    iconSrc: '/property-management.svg',
+    heading: "Property Management",
+    subheading: "Implementing high-end longevity of your real estate assets.",
+    points: [
+      "Property Listing & Marketing",
+      "Tenant Management",
+      "Maintenance & Support",
+      "Logistics Services"
+    ]
+  },
+  {
+    iconSrc: '/co-working-spaces.svg',
+    heading: "Co-Working Spaces",
+    subheading: "Flexible, professional and modular workplaces for modern teams.",
+    points: [
+      "Private Office",
+      "Dedicated Desk",
+      "Meeting Rooms",
+      "Virtual Office Options"
+    ]
+  },
+  {
+    iconSrc: '/construction-and-development.svg',
+    heading: "Construction & Development",
+    subheading: "Building pieces with exact detail through precision and insight.",
+    points: [
+      "Residential Homes",
+      "Commercial Buildings",
+      "Renovation & Restoration",
+      "Design & Project Execution"
+    ]
+  },
+  {
+    iconSrc: '/sales-and-advisory.svg',
+    heading: "Property Sales & Advisory",
+    subheading: "Helping you buy, sell, and invest in properties with confidence and precision.",
+    points: [
+      "Buy with Confidence",
+      "Sell for Maximum Value",
+      "Investment Advisory",
+      "Market Insights"
+    ]
+  },
+]
+
+
+
+---
+ <section class="flex flex-col w-full py-[50px] md:py-[100px] bg-secondary" id="division">
+  <div class="flex mx-auto gap-x-1.5 mb-[30px] md:mb-[80px] text-[32px] md:text-[40px] font-bold">
+    <div class="">Our</div>
+    <div class="text-primary">Core Divisions</div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[32px] w-full max-w-[1600px] mx-auto">
+    {
+      coreDivisions.map((division)=> {
+        return (
+        <TextCard
+          iconSrc={division.iconSrc}
+          heading={division.heading}
+          points={division.points}
+          subheading={division.subheading}
+          headingStyles="text-xl font-bold"
+          bgStyles="bg-[#191C1E] w-full"   
+          borderStyles="border border-transparent"   
+          customBorderStyle="background-image: linear-gradient(#191C1E, #191C1E), linear-gradient(to right, #30C5FF 0%, rgba(48, 197, 255, 0.5) 50%, rgba(255, 255, 255, 0.2) 100%); background-origin: border-box; background-clip: padding-box, border-box;"
+        />
+        )
+      })
+    }
+  </div>
+ </section>
