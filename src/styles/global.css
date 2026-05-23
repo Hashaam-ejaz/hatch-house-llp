@@ -16,3 +16,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+#services{
+  scroll-margin-top: 300px;
+}
