@@ -6,47 +6,52 @@ const services = [
     iconSrc: "/homes.svg",
     imageSrc: "/homes.png",
     heading: "Residential Homes",
-    subHeading: "Custom homes, villas, and high-end residential estates tailored for modern living."
+    subheading: "Custom homes, villas, and high-end residential estates tailored for modern living."
   },
   {
     iconSrc: "/buildings.svg",
     imageSrc: "/buildings.png",
     heading: "Commercial Buildings",
-    subHeading: "Office spaces, mixed use developments, retail, places, and scalable commercial infrastructure."
+    subheading: "Office spaces, mixed use developments, retail, places, and scalable commercial infrastructure."
   },
   {
     iconSrc: "/renovation.svg",
     imageSrc: "/renovation.png",
     heading: "Renovation & Restoration",
-    subHeading: "Luxury renovations, historical restoration projects, and heritage preservation expertise."
+    subheading: "Luxury renovations, historical restoration projects, and heritage preservation expertise."
   },
   {
     iconSrc: "/construction-and-development.svg",
     imageSrc: "/design.png",
     heading: "Design & Project Execution",
-    subHeading: "End-to-end project management, beyond construction, procurement and execution oversight."
+    subheading: "End-to-end project management, beyond construction, procurement and execution oversight."
   }
 ]
-
 ---
 
-<div class="flex flex-col md:py-[100px] pb-[50px]">
-  <div class="flex flex-col md:flex-rowmx-auto gap-x-1.5 mb-[30px] md:mb-[80px] text-[32px] md:text-[40px] font-bold text-center">
-    <div>Construction &</div>
-    <div class="text-primary">Development Services</div>
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[32px] w-full max-w-[1600px] mx-auto">
-    {
-      services.map((service)=> {
-        return (
-        <ServicesCard
-          iconSrc={service.iconSrc}
-          imageSrc={service.imageSrc}
-          heading={service.heading}
-          subHeading={service.subHeading}
-        />
-        )
-      })
-    }
+<div class="relative left-1/2 right-1/2 mx-[-50vw] w-screen lg:bg-[#191C1E] md:py-[100px] pb-[50px] px-6 md:px-12 lg:px-24">
+  
+  <div class="w-full max-w-[1440px] mx-auto flex flex-col">
+    
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-x-1.5 mb-[30px] md:mb-[80px] text-[32px] md:text-[40px] font-bold text-center">
+      <div>Construction &</div>
+      <div class="text-primary">Development Services</div>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[32px] w-full">
+      {
+        services.map((service)=> {
+          return (
+          <ServicesCard
+            iconSrc={service.iconSrc}
+            imageSrc={service.imageSrc}
+            heading={service.heading}
+            subHeading={service.subheading}
+          />
+          )
+        })
+      }
+    </div>
+
   </div>
 </div>
