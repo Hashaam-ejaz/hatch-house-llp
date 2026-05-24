@@ -1,0 +1,48 @@
+---
+const items = [
+  {
+    icon: "/buy.svg",
+    title: "Buy the Right Property",
+    text: "We understand your needs and budget to find the perfect property for you.",
+  },
+  {
+    icon: "/sell.svg",
+    title: "Sell for the Best Value",
+    text: "Strategic marketing and expert pricing to help you sell faster and at the best price.",
+  },
+  {
+    icon: "/support.svg",
+    title: "Smart-End Support",
+    text: "Data-driven insights to help you invest in properties that grow in value.",
+  },
+  {
+    icon: "/growth.svg",
+    title: "Portfolio Growth",
+    text: "Strategic counsel to scale your real estate portfolio efficiently.",
+  },
+];
+---
+
+<div class="flex flex-col py-[50px] md:py-[100px] px-6 md:px-12 lg:px-24">
+  <div
+    class="flex flex-col sm:flex-row justify-center items-center gap-x-3 mb-[30px] md:mb-[80px] text-[32px] md:text-[40px] font-bold text-center"
+  >
+    <div>We Help You</div>
+    <div class="text-primary">Buy, Sell & Grow</div>
+    <div>With Property</div>
+  </div>
+
+  <div class="flex md:flex-row flex-col gap-[50px]">
+    {
+      items.map((item) => (
+        <div class="flex flex-col gap-6 w-full max-w-[360px]">
+          <div class="w-[40px] h-[40px]">
+            <img src={item.icon} alt={item.title} />
+          </div>
+          <div class="font-semibold text-xl">{item.title}</div>
+          <div class="text-base text-[#F0F0F0]">{item.text}</div>
+        </div>
+      ))
+    }
+  </div>
+</div>
