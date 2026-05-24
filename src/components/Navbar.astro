@@ -1,21 +1,27 @@
 ---
 import Button from "./Button.astro"
 ---
-<header class="absolute left-1/2 right-1/2 top-0 z-50 mx-[-50vw] w-screen flex justify-between items-center px-6 py-4 md:px-12 lg:px-24 bg-secondary">
-  <div class="flex gap-2.5 justify-center items-center shrink-0">
-    <img src="/favicon.svg" alt="logo"/> 
-    <span class="font-bold text-xl sm:text-2xl md:text-[28px]">HatchHouseLLP</span>
-  </div>
 
-  <div class="flex md:hidden">
-    <Button text="Contact Now" variant="primary" href="#contact" class="text-[14px]!" target="_self"/>
-  </div>
+<header class="absolute top-0 left-[calc(50%-50vw)] w-screen z-50 bg-secondary">
+  
+  <div class="w-full max-w-[1440px] mx-auto flex justify-between items-center px-6 py-4 md:px-12 lg:px-24">
+    
+    <div class="flex gap-2.5 justify-center items-center shrink-0">
+      <img src="/favicon.svg" alt="logo"/> 
+      <span class="font-bold text-xl sm:text-2xl md:text-[28px] whitespace-nowrap">HatchHouseLLP</span>
+    </div>
 
-  <div class="hidden md:flex items-center gap-4 lg:gap-10 xl:gap-[70px]">
-    <Button text="Home" variant="ghost" href="/" target="_self" class="text-sm lg:text-base xl:text-[20px]" />
-    <Button text="Our Division" variant="ghost" href="#division" target="_self" class="text-sm lg:text-base xl:text-[20px]"/>
-    <Button text="Services" variant="ghost" href="#services" target="_self" class="text-sm lg:text-base xl:text-[20px]" />
-    <Button text="Projects" variant="ghost" href="#projects" target="_self" class="text-sm lg:text-base xl:text-[20px]"/>
-    <Button text="Contact Now" variant="primary" href="#contact" target="_self" class="text-sm lg:text-base xl:text-[20px] shrink-0" />
+    <div class="flex lg:hidden">
+      <Button text="Contact Now" variant="primary" href="#contact" class="text-[14px]!" target="_self"/>
+    </div>
+
+    <div class="hidden lg:flex items-center gap-4 lg:gap-10 xl:gap-[70px] whitespace-nowrap">
+      <Button text="Home" variant="ghost" href="/" target="_self" class="text-sm lg:text-base xl:text-[20px]" />
+      <Button text="Our Division" variant="ghost" href="#division" target="_self" class="text-sm lg:text-base xl:text-[20px]"/>
+      <Button text="Services" variant="ghost" href="#services" target="_self" class="text-sm lg:text-base xl:text-[20px]" />
+      <Button text="Projects" variant="ghost" href="#projects" target="_self" class="text-sm lg:text-base xl:text-[20px]"/>
+      <Button text="Contact Now" variant="primary" href="#contact" target="_self" class="text-sm lg:text-base xl:text-[20px] shrink-0" />
+    </div>
+
   </div>
 </header>
