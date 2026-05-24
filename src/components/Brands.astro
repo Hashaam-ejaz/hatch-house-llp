@@ -1,0 +1,39 @@
+---
+// Define your brand logos array here
+const brands = [
+  { name: "Toni&Guy", src: "/toni-guy.png" },
+  { name: "Guinot", src: "/guinot.png" },
+  { name: "Rollover", src: "/rollover.png" },
+  { name: "Zubaidas", src: "/zubaidas.png" },
+  { name: "Graco", src: "/graco.png" },
+  { name: "DIB", src: "/dib.png" },
+  { name: "Amina.Z", src: "/amina-z.png" },
+  { name: "Enem", src: "/enem.png" },
+  { name: "MauSummery", src: "/mausummery.png" },
+  { name: "Origins", src: "/origins.png" },
+]
+---
+
+<div class="flex flex-col py-[50px] md:py-[100px] px-6 md:px-12 lg:px-24 w-full max-w-[1440px] mx-auto">
+  <div
+    class="flex flex-col sm:flex-row justify-center items-center gap-x-3 mb-[30px] md:mb-[60px] text-[32px] md:text-[40px] font-bold text-center"
+  >
+    <div>Trusted By Leading</div>
+    <div class="text-primary">Brands</div>
+  </div>
+
+  <div class="flex flex-wrap justify-center items-center gap-10 md:gap-[50px] w-full">
+    {
+      brands.map((brand) => (
+        // FIXED: Added precise math to force the exact row wrapping you requested
+        <div class="flex justify-center items-center max-w-[180px] w-[calc(50%-20px)] md:w-[calc(25%-38px)] lg:w-[calc(20%-40px)]">
+          <img 
+            src={brand.src} 
+            alt={brand.name} 
+            class="w-full h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" 
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>

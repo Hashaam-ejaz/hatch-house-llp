@@ -1,0 +1,64 @@
+---
+
+const projects = [
+  {
+    title: "Luxury Residence",
+    imageSrc: "/residence.png",
+    location: "DHA, Lahore"
+  },
+  {
+    title: "Commercial Plaza",
+    imageSrc: "/plaza.png",
+    location: "Gulberg, Lahore"
+  },
+  {
+    title: "Office Renovation",
+    imageSrc: "/office.png",
+    location: "MM Alam, Lahore"
+  },
+  {
+    title: "Managed Mixed-Use Property",
+    imageSrc: "/property.png",
+    location: "Cantt, Lahore"
+  },
+]
+
+---
+
+<div class="relative left-1/2 right-1/2 mx-[-50vw] w-screen lg:bg-[#191C1E] md:py-[100px] px-6 md:px-12 lg:px-24" id="projects">
+  
+  <div class="w-full max-w-[1440px] mx-auto flex flex-col">
+    
+    <div class="flex flex-col sm:flex-row items-center gap-x-3 mb-[40px] md:mb-[30px] text-[32px] md:text-[40px] font-bold text-left">
+      <div>Featured</div>
+      <div class="text-primary">Projects</div>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[32px] w-full">
+      {
+        projects.map((project)=>(
+          <div class="flex flex-col gap-4">
+            <div class="w-full h-[370px] overflow-hidden rounded-lg relative bg-transparent">
+              <img 
+                src={project.imageSrc} 
+                alt={project.title} 
+                class="w-full h-full object-cover block absolute inset-0"
+              />
+            </div>
+            
+            <div class="flex flex-col gap-2">
+              <div class="font-medium text-xl text-white">{project.title}</div>
+              <div class="flex gap-2 items-center">
+                <div class="w-4 h-4 shrink-0">
+                  <img src="/location-gray.svg" alt="location icon" class="w-full h-full" />
+                </div>
+                <div class="text-[#C6C6CD] text-base">{project.location}</div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+  </div>
+</div>
