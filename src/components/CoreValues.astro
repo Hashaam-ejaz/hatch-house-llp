@@ -1,0 +1,51 @@
+---
+const values = [
+  {
+    icon: "/integrity.svg",
+    title: "Built on Integrity",
+    text: "Transparency and ethical practices."
+  },
+  {
+    icon: "/engineering.svg",
+    title: "Engineering Excellence",
+    text: "Technical precision in every project."
+  },
+  {
+    icon: "/client.svg",
+    title: "Client Focused",
+    text: "Long term partnerships."
+  },
+  {
+    icon: "/value.svg",
+    title: "Value Creation",
+    text: "Strategic market strategies."
+  }
+];
+---
+
+<div class="relative left-1/2 right-1/2 mx-[-50vw] w-screen lg:bg-[#191C1E] py-[30px] lg:py-[40px] px-12 md:px-24 lg:px-48">
+  
+  <div class="w-full max-w-[1440px] mx-auto">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[50px] lg:gap-6 w-full">
+      
+      {values.map((item) => (
+        <div class="flex items-center gap-4 w-full">
+          <div class="w-[32px] h-[32px] shrink-0 flex items-center justify-center">
+            <img src={item.icon} alt={item.title} class="w-full h-full object-contain" />
+          </div>
+          
+          <div class="flex flex-col gap-1">
+            <h4 class="text-[24px] font-medium leading-none text-white">
+              {item.title}
+            </h4>
+            <p class="text-[14px] text-[#E3E3E3] leading-snug">
+              {item.text}
+            </p>
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</div>

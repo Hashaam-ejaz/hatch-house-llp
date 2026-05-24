@@ -18,6 +18,10 @@ html {
 }
 
 
-#services{
+#services {
   scroll-margin-top: 300px;
+}
+
+#projects {
+  scroll-margin-top: 100px;
 }
