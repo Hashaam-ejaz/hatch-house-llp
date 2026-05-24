@@ -1,0 +1,24 @@
+---
+import Button from "./Button.astro";
+---
+
+<section
+  class="flex flex-col w-full py-[50px] md:py-[100px] bg-secondary"
+  id="contact"
+>
+  <div
+    class="flex mx-auto gap-x-3 mb-[40px] text-[32px] md:text-[40px] font-bold"
+  >
+    <div>Let's Build Something</div>
+    <div class="text-primary">Exceptional</div>
+  </div>
+  <div class="flex flex-col justify-center items-center">
+    <Button
+      text="Book A Consultation"
+      variant="primary"
+      href="https://wa.me/923224787456?text=Hi,%20I%20am%20interested%20in%20booking%20a%20consultation%20with%20HatchHouse%20LLP."
+      class="max-w-[300px] text-center rounded-none text-black! font-medium text-[20px]"
+      target="_blank"
+    />
+  </div>
+</section>
