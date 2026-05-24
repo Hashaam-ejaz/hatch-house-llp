@@ -25,7 +25,7 @@ const items = [
     <div class="flex items-center justify-center shrink-0 w-[132px] h-[60px] md:w-[500px] md:h-[183px] mb-[30px] md:mb-[100px] mt-3.5 md:mt-[100px] md:mx-auto">
       <img src="/footer-logo.webp" alt="Hatch" />
     </div>
-    <div class="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center gap-5 md:gap-x-[100px] text-[25px] md:w-[600px] md:mx-auto">
+    <div class="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-5 md:gap-x-[100px] text-[25px] md:w-[600px] md:mx-auto">
       {
         items.map((item, index) => {
           return (
@@ -35,8 +35,8 @@ const items = [
               class={`
                 flex gap-2.5 transition-opacity hover:opacity-80
                 ${index === 2 
-                  ? "w-full items-start justify-center md:mt-[50px]"
-                  : "items-center justify-center md:justify-start"
+                  ? "w-full items-start md:justify-center"
+                  : "items-center justify-start"
                 }
               `}
             >
@@ -47,7 +47,7 @@ const items = [
               />
               
               <div class={`
-                ${index === 2 ? "wrap-break-words text-center md:text-left" : "whitespace-nowrap"} 
+                ${index === 2 ? "wrap-break-words md:text-center" : "whitespace-nowrap"} 
               `}>
                 {item.text}
               </div>
